@@ -29,4 +29,4 @@ jobs:
         run: |
           pytest
           coverage run postinumerot_test.py
-          coverage report
+          coverage report -m
