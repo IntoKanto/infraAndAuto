@@ -19,3 +19,13 @@ jobs:
       # You can test your matrix by printing the current Python version
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+
+      - name: Install dependencies
+        run: |
+          pip install pytest
+          pip install coverage
+
+      - name: Test with pytest & coverage
+        run: |
+          pytest
+          coverage run postinumerot_test.py
